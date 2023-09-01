@@ -1,0 +1,10 @@
+{
+  "name": "@turborepo-react-native/root",
+  "packageManager": "yarn@3.6.3",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
