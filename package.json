@@ -5,6 +5,8 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "metro-react-native-babel-preset": "^0.76.8",
     "syncpack": "^11.2.1",
     "turbo": "^1.10.13"
   },

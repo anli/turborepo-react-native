@@ -1,8 +1,9 @@
 module.exports = {
   root: true,
-  ignorePatterns: ["**/*"],
+  ignorePatterns: ['**/*'],
   parserOptions: {
-    project: "./tsconfig.base.json",
+    project: './tsconfig.base.json',
     tsconfigRootDir: __dirname,
   },
-};
+  extends: ['plugin:prettier/recommended'],
+}
