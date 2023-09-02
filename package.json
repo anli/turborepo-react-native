@@ -2,10 +2,18 @@
   "name": "@turborepo-react-native/root",
   "version": "0.0.0",
   "devDependencies": {
-    "syncpack": "^11.2.1"
+    "syncpack": "^11.2.1",
+    "turbo": "^1.10.13"
   },
   "packageManager": "yarn@3.6.3",
   "private": true,
+  "scripts": {
+    "android": "turbo run android",
+    "ios": "turbo run ios",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "test": "turbo run test"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"

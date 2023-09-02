@@ -82,3 +82,8 @@ node_modules/
 
 # testing
 **/coverage
+
+.turbo
+build/**
+dist/**
+.next/**
