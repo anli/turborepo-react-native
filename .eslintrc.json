@@ -1,7 +1,0 @@
-{
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "parserOptions": {
-    "project": "./tsconfig.base.json"
-  }
-}

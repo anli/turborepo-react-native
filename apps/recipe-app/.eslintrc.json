@@ -1,0 +1,4 @@
+{
+  "extends": ["@react-native", "../../.eslintrc.js"],
+  "ignorePatterns": ["!**/*", "public", ".cache", "node_modules"]
+}

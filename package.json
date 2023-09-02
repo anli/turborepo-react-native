@@ -2,6 +2,9 @@
   "name": "@turborepo-react-native/root",
   "version": "0.0.0",
   "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
     "syncpack": "^11.2.1",
     "turbo": "^1.10.13"
   },

@@ -2515,7 +2515,6 @@ __metadata:
     "@react-native/eslint-config": ^0.72.2
     "@react-native/metro-config": ^0.72.11
     "@tsconfig/react-native": ^3.0.0
-    "@turborepo-react-native/tsconfig": "workspace:^"
     "@types/react": ^18.0.24
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.2.1
@@ -2534,14 +2533,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@turborepo-react-native/root@workspace:."
   dependencies:
+    "@babel/core": ^7.20.0
+    "@babel/preset-env": ^7.20.0
+    "@babel/runtime": ^7.20.0
     syncpack: ^11.2.1
     turbo: ^1.10.13
-  languageName: unknown
-  linkType: soft
-
-"@turborepo-react-native/tsconfig@workspace:^, @turborepo-react-native/tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "@turborepo-react-native/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
   linkType: soft
 

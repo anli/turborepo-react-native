@@ -1,5 +1,5 @@
-const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-const {resolve} = require('path');
+const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const { resolve } = require('path');
 const rootPaths = [resolve(__dirname), resolve(__dirname, '../..')];
 const nodeModulesPaths = rootPaths.map(rootPath =>
   resolve(rootPath, 'node_modules'),
