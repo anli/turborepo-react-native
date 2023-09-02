@@ -2,6 +2,7 @@
   "name": "@turborepo-react-native/recipe-app",
   "version": "0.0.0",
   "dependencies": {
+    "@turborepo-react-native/tsconfig": "workspace:^",
     "react": "18.2.0",
     "react-native": "0.72.4"
   },
@@ -30,6 +31,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "lint-types": "tsc -b",
     "start": "react-native start",
     "test": "jest"
   }

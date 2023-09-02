@@ -11,6 +11,7 @@
     "android": "turbo run android",
     "ios": "turbo run ios",
     "lint": "turbo run lint",
+    "lint-types": "turbo run lint-types",
     "start": "turbo run start",
     "test": "turbo run test"
   },
