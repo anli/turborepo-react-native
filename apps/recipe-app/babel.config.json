@@ -1,4 +1,17 @@
 {
   "presets": ["module:metro-react-native-babel-preset"],
-  "plugins": ["nativewind/babel", "react-native-reanimated/plugin"]
+  "plugins": [
+    "nativewind/babel",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@assets": "./assets",
+          "@pages": "./src/pages"
+        }
+      }
+    ],
+    "react-native-reanimated/plugin"
+  ]
 }
