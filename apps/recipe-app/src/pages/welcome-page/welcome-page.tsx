@@ -1,18 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 
 export const WelcomePage = () => {
   return (
-    <View style={styles.screen}>
+    <View className="flex-1 justify-center items-center bg-amber-500">
       <Text>WelcomePage</Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    backgroundColor: 'white',
-    flex: 1,
-    justifyContent: 'center',
-  },
-})

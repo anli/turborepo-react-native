@@ -8,6 +8,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "metro-react-native-babel-preset": "^0.76.8",
     "syncpack": "^11.2.1",
+    "tailwindcss": "3.3.2",
     "turbo": "^1.10.13"
   },
   "packageManager": "yarn@3.6.3",
@@ -23,5 +24,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "nativewind": "^2.0.11"
+  }
 }
