@@ -1,5 +1,9 @@
 import React, { FC, PropsWithChildren, useEffect } from 'react'
-import Animated, { useSharedValue, withSpring } from 'react-native-reanimated'
+import Animated, {
+  useSharedValue,
+  withDelay,
+  withSpring,
+} from 'react-native-reanimated'
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen'
 
 type WelcomeLogoRingProps = {
@@ -13,17 +17,7 @@ export const WelcomeLogoRing: FC<PropsWithChildren<WelcomeLogoRingProps>> = ({
   children,
 }) => {
   const padding = useSharedValue(0)
-
-  useEffect(() => {
-    padding.value = 0
-    const timeout = setTimeout(
-      () => (padding.value = withSpring(padding.value + hp(size))),
-      delayMs,
-    )
-    return () => {
-      clearTimeout(timeout)
-    }
-  }, [delayMs, padding, size])
+  padding.value = withDelay(delayMs, withSpring(padding.value + hp(size)))
 
   return (
     <Animated.View className="rounded-full bg-white/20" style={{ padding }}>
