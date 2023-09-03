@@ -1,5 +1,5 @@
 import React from 'react'
-import { WelcomePage } from '@pages'
+import { HomePage, WelcomePage } from '@pages'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -13,6 +13,7 @@ export const App = () => {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="WelcomePage" component={WelcomePage} />
+        <Stack.Screen name="HomePage" component={HomePage} />
       </Stack.Navigator>
     </NavigationContainer>
   )
