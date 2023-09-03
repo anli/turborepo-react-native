@@ -1,9 +1,9 @@
 import React from 'react'
-import { FlatList, StatusBar, StyleSheet, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import MasonryList from '@react-native-seoul/masonry-list'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-
 import { PageHeader, RecipeSearchBar, UserGreeting } from '@entities'
-import { UserAvatar, UserNotification } from '@features'
+import { RecipeCategoryFilter, UserAvatar, UserNotification } from '@features'
 
 export const HomePage = () => {
   const insets = useSafeAreaInsets()
@@ -11,7 +11,7 @@ export const HomePage = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor="transparent" />
-      <FlatList
+      <MasonryList
         contentContainerStyle={{
           paddingTop: insets.top,
           paddingBottom: insets.bottom,
@@ -24,9 +24,12 @@ export const HomePage = () => {
             />
             <UserGreeting />
             <RecipeSearchBar />
+            <RecipeCategoryFilter />
           </View>
         }
-        renderItem={() => null}
+        renderItem={() => {
+          return <Text>Item</Text>
+        }}
         data={[]}
       />
     </>
