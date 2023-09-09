@@ -1,17 +1,25 @@
 import React from 'react'
 import { StatusBar, StyleSheet, Text, View } from 'react-native'
-import MasonryList from '@react-native-seoul/masonry-list'
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen'
+import {
+  FilterCategoryProvider,
+  PageHeader,
+  RecipeCategoryFilter,
+  RecipeMasonryList,
+  UserAvatar,
+  UserGreeting,
+  UserNotification,
+} from '@entities'
+import { FilterCategory, RecipeSearchBar } from '@features'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { PageHeader, RecipeSearchBar, UserGreeting } from '@entities'
-import { RecipeCategoryFilter, UserAvatar, UserNotification } from '@features'
 
 export const HomePage = () => {
   const insets = useSafeAreaInsets()
 
   return (
-    <>
+    <FilterCategoryProvider>
       <StatusBar barStyle="dark-content" backgroundColor="transparent" />
-      <MasonryList
+      <RecipeMasonryList
         contentContainerStyle={{
           paddingTop: insets.top,
           paddingBottom: insets.bottom,
@@ -24,15 +32,19 @@ export const HomePage = () => {
             />
             <UserGreeting />
             <RecipeSearchBar />
-            <RecipeCategoryFilter />
+            <RecipeCategoryFilter
+              renderItem={category => <FilterCategory {...category} />}
+            />
+            <Text
+              style={{ fontSize: hp(3) }}
+              className="font-semibold text-neutral-600 mx-4 mb-4"
+            >
+              Recipes
+            </Text>
           </View>
         }
-        renderItem={() => {
-          return <Text>Item</Text>
-        }}
-        data={[]}
       />
-    </>
+    </FilterCategoryProvider>
   )
 }
 

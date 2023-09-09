@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, useEffect } from 'react'
+import React, { FC, PropsWithChildren } from 'react'
 import Animated, {
   useSharedValue,
   withDelay,
