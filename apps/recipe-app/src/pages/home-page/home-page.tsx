@@ -3,6 +3,7 @@ import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen'
 import {
   FilterCategoryProvider,
+  FilterRecipeProvider,
   PageHeader,
   RecipeCategoryFilter,
   RecipeMasonryList,
@@ -17,34 +18,36 @@ export const HomePage = () => {
   const insets = useSafeAreaInsets()
 
   return (
-    <FilterCategoryProvider>
-      <StatusBar barStyle="dark-content" backgroundColor="transparent" />
-      <RecipeMasonryList
-        contentContainerStyle={{
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
-        }}
-        ListHeaderComponent={
-          <View style={styles.header}>
-            <PageHeader
-              StartComponent={<UserAvatar />}
-              EndComponent={<UserNotification />}
-            />
-            <UserGreeting />
-            <RecipeSearchBar />
-            <RecipeCategoryFilter
-              renderItem={category => <FilterCategory {...category} />}
-            />
-            <Text
-              style={{ fontSize: hp(3) }}
-              className="font-semibold text-neutral-600 mx-4 mb-4"
-            >
-              Recipes
-            </Text>
-          </View>
-        }
-      />
-    </FilterCategoryProvider>
+    <FilterRecipeProvider>
+      <FilterCategoryProvider>
+        <StatusBar barStyle="dark-content" backgroundColor="transparent" />
+        <RecipeMasonryList
+          contentContainerStyle={{
+            paddingTop: insets.top,
+            paddingBottom: insets.bottom,
+          }}
+          ListHeaderComponent={
+            <View style={styles.header}>
+              <PageHeader
+                StartComponent={<UserAvatar />}
+                EndComponent={<UserNotification />}
+              />
+              <UserGreeting />
+              <RecipeSearchBar />
+              <RecipeCategoryFilter
+                renderItem={category => <FilterCategory {...category} />}
+              />
+              <Text
+                style={{ fontSize: hp(3) }}
+                className="font-semibold text-neutral-600 mx-4 mb-4"
+              >
+                Recipes
+              </Text>
+            </View>
+          }
+        />
+      </FilterCategoryProvider>
+    </FilterRecipeProvider>
   )
 }
 

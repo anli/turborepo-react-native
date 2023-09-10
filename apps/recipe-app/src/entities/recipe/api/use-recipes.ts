@@ -7,7 +7,7 @@ export type Recipe = {
   imageUrl: string | null
 }
 
-export const useRecipes = (category: string) => {
+export const useRecipes = (category: string, searchText?: string) => {
   return useQuery({
     queryKey: ['recipes', category],
     queryFn: () => getRecipes(category),
@@ -21,13 +21,16 @@ export const useRecipes = (category: string) => {
       }
     },
     select: data => {
-      return data.meals?.map(
+      const mappedData = data.meals?.map(
         ({ idMeal, strMeal, strMealThumb }): Recipe => ({
           id: idMeal,
           title: strMeal,
           imageUrl: strMealThumb,
         }),
       )
+      return searchText
+        ? mappedData?.filter(_item => _item.title?.includes(searchText))
+        : mappedData
     },
   })
 }

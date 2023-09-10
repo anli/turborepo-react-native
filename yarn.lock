@@ -2670,6 +2670,7 @@ __metadata:
     clsx: ^2.0.0
     eslint: ^8.19.0
     jest: ^29.2.1
+    lottie-react-native: ^6.2.0
     metro-react-native-babel-preset: ^0.76.8
     nativewind: ^2.0.11
     prettier: ^2.4.1
@@ -2687,6 +2688,7 @@ __metadata:
     react-test-renderer: ^18.2.0
     tailwindcss: 3.3.2
     typescript: ^4.8.4
+    use-debounce: ^9.0.4
   languageName: unknown
   linkType: soft
 
@@ -7296,6 +7298,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-react-native@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "lottie-react-native@npm:6.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.46"
+    react-native-windows: ">=0.63.x"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 0e92165c69aafd4a3b05dd9278491406c63736ca02db91dff48214708477cf9f98f948c137da523aa31ec7d71b5a179487e52b57c4f105672ea24d2f132f53f8
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -10964,6 +10980,15 @@ __metadata:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
+  languageName: node
+  linkType: hard
+
+"use-debounce@npm:^9.0.4":
+  version: 9.0.4
+  resolution: "use-debounce@npm:9.0.4"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 37da4ecbe4e10a6230580cac03a8cae1788ea3e417dfdd92fcf654325458cf1b4567fd57bebf888edab62701a6abe47059a585008fd04228784f223f94d66ce4
   languageName: node
   linkType: hard
 
