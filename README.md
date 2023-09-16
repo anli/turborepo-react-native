@@ -31,7 +31,7 @@ Techniques
 - Skeleton screens
 - Observer pattern
 - Motion system [Transition patterns](https://m2.material.io/design/motion/the-motion-system.html#transition-patterns)
-- **Upcoming** Behavior Driven Development, Test Driven Development
+- Behavior Driven Development, Test Driven Development
 - **Upcoming** Performance Driven Development
 
 Platforms
@@ -50,7 +50,7 @@ Tools
 - [React Native Masonry List](https://github.com/hyochan/react-native-masonry-list)
 - [Lottie React Native](https://github.com/lottie-react-native/lottie-react-native)
 - [react-native-skeleton-placeholder](https://github.com/chramos/react-native-skeleton-placeholder)
-- **Upcoming** [React Native Testing Library](https://callstack.github.io/react-native-testing-library/), jest
+- [React Native Testing Library](https://callstack.github.io/react-native-testing-library/), jest, [msw](https://mswjs.io/)
 - **Upcoming** [Maestro](https://maestro.mobile.dev/), [Flashlight](https://flashlight.dev/)
 - **Upcoming** [Reassure](https://github.com/callstack/reassure)
 
