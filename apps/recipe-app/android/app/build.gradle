@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.recipe"
+    namespace "com.anlitz.recipe"
     defaultConfig {
-        applicationId "com.recipe"
+        applicationId "com.anlitz.recipe"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

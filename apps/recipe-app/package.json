@@ -56,6 +56,12 @@
     "lint": "eslint .",
     "lint-types": "tsc -b",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "e2e-ios-build": "(cd ios && xcrun xcodebuild -scheme 'Recipe' -workspace 'Recipe.xcworkspace' -configuration Release -sdk 'iphonesimulator' -destination 'generic/platform=iOS Simulator' -derivedDataPath build)",
+    "e2e-ios-test": "source .env.local && xcrun simctl install Booted ios/build/Build/Products/Release-iphonesimulator/Recipe.app && maestro --device $E2E_IOS_DEVICE_ID  test e2e/scripts/main.e2e.yml",
+    "e2e-android-build": "(cd android && ./gradlew assembleRelease)",
+    "e2e-android-test": "source .env.local && adb install android/app/build/outputs/apk/release/app-release.apk &&  maestro --device $E2E_ANDROID_DEVICE_ID test e2e/scripts/main.e2e.yml",
+    "flashlight-android-report": "flashlight test --bundleId com.anlitz.recipe --testCommand 'npm run e2e-android-test' --duration 10000 --resultsFilePath flashlight-results.json && flashlight report flashlight-results.json",
+    "flashlight-android-cloud": "source .env.local && flashlight cloud --apiKey $FLASHLIGHT_API_KEY --app android/app/build/outputs/apk/release/app-release.apk --test e2e/scripts/main.e2e.yml --duration 10000"
   }
 }

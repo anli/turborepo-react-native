@@ -1,0 +1,31 @@
+appId: com.anlitz.maestro
+tags:
+  - smoke
+---
+- launchApp:
+    appId: 'com.anlitz.recipe'
+    clearState: true
+    clearKeychain: true # optional: clear *entire* iOS keychain
+    stopApp: false # optional (true by default): stop the app before launching it
+- assertVisible: 'Make your own food,'
+- assertVisible: 'stay at home'
+- assertVisible: 'Beef and Mustard Pie'
+
+- swipe:
+    from: 'Lamb'
+    direction: LEFT
+- assertVisible: 'Pork'
+- tapOn: 'Pork'
+- assertVisible: ' Bubble & Squeak'
+- scrollUntilVisible:
+    element: 'Hot and Sour Soup'
+    direction: DOWN
+- scrollUntilVisible:
+    element: 'Search any recipe'
+    direction: UP
+
+- tapOn: 'Search Recipe Input'
+- inputText: 'nothing'
+- hideKeyboard
+- assertVisible: 'Sorry, that search has no results.'
+- assertVisible: 'Please try a different criteria.'

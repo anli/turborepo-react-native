@@ -1,5 +1,7 @@
 # turborepo-react-native
 
+Project to assess technologies worth investing some research and prototyping efforts in to see if it has potential value-add.
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -17,9 +19,13 @@
     4. Share any other tips or guidance for others attempting this or something similar.
  -->
 
-Project to assess technologies worth investing some research and prototyping efforts in to see if it has potential value-add.
+General features
 
 <img src="docs/overview.gif" width="184" height="400" />
+
+End to End testing
+
+<img src="docs/end-to-end.gif" width="600" height="366" />
 
 ## Built With
 

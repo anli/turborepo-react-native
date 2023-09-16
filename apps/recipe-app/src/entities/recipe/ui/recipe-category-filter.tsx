@@ -38,6 +38,7 @@ export const RecipeCategoryFilter: FC<RecipeCategoryFilterProps> = ({
         data={categories}
         renderItem={handleRenderItem}
         keyExtractor={item => item.id}
+        accessibilityLabel="Recipe Category Filter"
       />
     </Animated.View>
   )

@@ -87,3 +87,7 @@ node_modules/
 build/**
 dist/**
 .next/**
+
+.env.local
+
+flashlight-results.json
