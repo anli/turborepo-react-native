@@ -1,5 +1,5 @@
 import { getCategories } from '@shared/api'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export type Category = {
   id: string

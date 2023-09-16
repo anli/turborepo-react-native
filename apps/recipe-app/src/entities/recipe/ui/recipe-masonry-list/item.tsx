@@ -50,6 +50,7 @@ export const Item: FC<ItemProps> = ({ index, title, imageUrl }) => {
         .duration(600)
         .springify()
         .damping(12)}
+      accessibilityLabel="Recipe Item"
     >
       <Pressable
         className="flex justify-center mb-4"

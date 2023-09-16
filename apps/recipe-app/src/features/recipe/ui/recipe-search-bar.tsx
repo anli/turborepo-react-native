@@ -17,6 +17,7 @@ export const RecipeSearchBar = ({ ...props }) => {
   return (
     <View className="mx-4 mt-4 flex-row items-center rounded-full bg-black/5 p-[6px]">
       <TextInput
+        accessibilityLabel="Search Recipe Input"
         placeholder="Search any recipe"
         placeholderTextColor={'gray'}
         style={{ fontSize: hp(1.7) }}
